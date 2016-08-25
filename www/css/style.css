@@ -1,0 +1,110 @@
+/* Empty. Add your own CSS if you like */
+.loader{
+	background: #2D4F9A;
+}
+.loader img {
+	margin-top: 25%;
+}
+.loader .spinner svg {
+  width: 28px;
+  height: 28px;
+  stroke: #fff;
+  fill: #fff;
+  display: block;
+  margin: 0 auto;
+}
+.slider {
+	position: absolute !important;
+	top: 0 !important;
+	left: 0 !important;
+	bottom: 0 !important;
+	right: 0 !important;
+}
+.card, .scroll{
+  height: 100%;
+  min-height: 100%;
+}
+.contenedorSlider, .contenedorSlider img{
+	height: 100%;
+}
+.popup{
+	width: 87% !important;
+}
+.logo_header{
+	height: 100%;
+}
+.contactoCsm .icon{
+	font-size: 2.5em;
+    color: #00569E;
+}
+.contactoCsm img{
+	margin: 10% 0;
+}
+.menuCsm{
+	background-color: #717174;
+}
+.menuCsm .item, .menuCsm .item-content{
+	color: white;
+	border-color: transparent;
+	background-color: #717174;
+}
+.btnLogin{
+	background-color: #00569E;
+	color: white;
+}
+.icon-custom {
+	background-repeat: no-repeat;
+	background-position:center;
+	background-size:contain;
+	width: 32px;
+	display: block !important;
+	height: 32px !important;
+	margin-top: 10px;
+}
+.banner-home{
+	width: 100%;
+	max-height: 100%;
+}
+.icon-comunicacion {
+	background-image: url('../img/icon_comunicacion.png');
+}
+.icon-comunicacion1 {
+	background-image: url('../img/icon_comunicacion1.png');
+}
+.icon-promociones{
+	background-image: url('../img/icon_promociones.png');
+}
+.icon-promociones1{
+	background-image: url('../img/icon_promociones1.png');
+}
+.icon-activaciones{
+	background-image: url('../img/icon_activaciones.png');
+}
+.icon-vendedores{
+	background-image: url('../img/icon_vendedores.png');	
+}
+.icon-home{
+	background-image: url('../img/home_icon.png');	
+}
+.icon-notificaciones{
+	background-image: url('../img/icon_notificaciones.png');	
+}
+.icon-contacto{
+	background-image: url('../img/icon_contacto.png');	
+}
+.barMenu{
+	background-color: #717174 !important;
+}
+.bar-header{
+	border-bottom-width: 0 !important;
+}
+
+.tabs .tabs-icon-top{
+	background: #777 !important;
+}
+
+.profile-icon{
+	display: block;
+	font-size: 150px;
+	margin: 0 auto;
+}

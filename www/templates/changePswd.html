@@ -1,0 +1,12 @@
+<div class="list">
+   <label class="item item-input item-floating-label">
+    <span class="input-label">Nueva contraseña</span>
+    <input type="password" name="newpassword" ng-change="testPswd()" ng-model="data.newpassword" ng-minlength="9" required placeholder="Nueva contraseña"/>
+    <p class="error" ng-show="data.invalidpswd">La contraseña no cumple con las especificaciones necesarias</p>
+  </label>
+    <label class="item item-input item-floating-label">
+    <span class="input-label">Confirmar contraseña</span>
+    <input type="password" name="confirmpassword" ng-change="testConfirmPswd()" ng-model="data.confirm_password" ng-minlength="9" required placeholder="Confirmar contraseña" />
+    <p class="error" ng-show="data.invalidconfirmpswd">La contraseña no concuerda</p>
+  </label>
+</div>

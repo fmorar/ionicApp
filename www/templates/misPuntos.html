@@ -1,0 +1,67 @@
+<ion-view view-title="misPuntos">
+	<ion-nav-title>
+    	<img class="logo_header" ng-src="{{'img/'+logo}}">
+    </ion-nav-title>
+    <div class="bar bar-subheader">
+	  <h2 class="title">Mis puntos</h2>
+	</div>
+		<ion-content class="has-subheader has-header has-tabs">
+
+			<a ng-click="verFacruras()" class="item item-icon-left"> 
+	   		   <i class="icon ion-ios-list-outline"></i>
+	   		   <h2>Push Money</h2>
+		    </a>
+
+		    <a ng-click="verFacruras()" class="item item-icon-left"> 
+	   		   <i class="icon ion-ios-list-outline"></i>
+	   		   <h2>Puntos</h2>
+		    </a>
+
+		    <a ng-click="verFacruras()" class="item item-icon-left"> 
+	   		   <i class="icon ion-ios-list-outline"></i>
+	   		   <h2>Incentivos</h2>
+		    </a>
+				
+	</ion-content>
+	<div class="tabs tabs-icon-top">
+	  <a class="tab-item" href="#/app/inicio">
+	    <i class="icon icon-custom icon-home"></i>
+	    Inicio
+	  </a>
+	  <a class="tab-item" ng-click="comunicacion()">
+	    <i class="icon icon-custom icon-comunicacion"></i>
+	    Comunicación
+	  </a>
+	  <a class="tab-item" ng-click="promociones()">
+	    <i class="icon icon-custom icon-promociones"></i>
+	    Promociones
+	  </a>
+	</div>
+</ion-view> 
+
+
+<script id="facturas.html" type="text/ng-template">
+<style type="text/css">
+.facturas{
+	margin-top: 0;
+    margin-bottom: 0;
+}
+</style>
+	<div class="list">
+	    <div class="item item-body">
+	    	<div ng-repeat="misPuntos in misPuntos">
+	    		<div class="list">
+				  <div class="item item-divider">
+				    <p class"facturas">Nombre de la promoción: {{misPuntos.NombreIncentivo}}</p>				  
+				    <p class"facturas">Nombre Pdv: {{misPuntos.NombrePdv}}</p>
+				    <p class"facturas">Sku: {{misPuntos.Sku}}</p>
+				    <p class"facturas">Porcentaje de la cuota: {{misPuntos.PorcentajeCuota}}</p>
+				    <p class"facturas">Monto de la Venta: {{misPuntos.MontoVenta}}</p>
+				    <p class"facturas">Premio a redemir: {{misPuntos.PremioRedimir}}</p>
+				  </div>
+				</div>
+	    	</div>
+
+	  	</div>
+  	</div> 
+</script> 

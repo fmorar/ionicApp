@@ -1,0 +1,43 @@
+<ion-view view-title="Promociones">
+	<ion-nav-title>
+    	<img class="logo_header" ng-src="{{'img/'+logo}}">
+    </ion-nav-title>
+	<div class="bar bar-subheader">
+	  <h2 class="title">Promociones</h2>
+	</div>
+
+	<ion-content class="has-subheader has-header has-tabs">
+	<div class="list list-inset">
+		<label class="item item-input">
+			<i class="icon ion-search placeholder-icon"></i>
+			<input type="text" ng-model="buscador" placeholder="Search">
+		</label>
+	</div>
+		<div class="list">
+		  	<div class="list card">
+			   	<div class="list">
+			   		<a class="item item-thumbnail-left item-text-wrap" ng-href="#/app/promociones_detalles/{{promocion.idPromocion}}" ng-model="listaPromociones" ng-repeat="promocion in Promociones | filter: chkidCat() | filter:buscador">
+				      <img ng-src="{{promocion.Banner}}" class="full-image">
+				      <h2>{{promocion.Titulo}}</h2>
+				      <p>{{promocion.Marca}}</p>
+				      <p>{{promocion.Descripcion}}</p>
+				    </a>
+			  	</div> 
+		  	</div>
+		</div>
+	</ion-content>
+	<div class="tabs tabs-icon-top">
+	  <a class="tab-item" href="#/app/inicio">
+	    <i class="icon icon-custom icon-home"></i>
+	    Inicio
+	  </a>
+	  <a class="tab-item" ng-click="comunicacion()">
+	    <i class="icon icon-custom icon-comunicacion"></i>
+	    Comunicación
+	  </a>
+	  <a class="tab-item" ng-click="promociones()">
+	    <i class="icon icon-custom icon-promociones"></i>
+	    Promociones
+	  </a>
+	</div>
+</ion-view>

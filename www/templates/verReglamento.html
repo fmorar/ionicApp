@@ -1,0 +1,33 @@
+<ion-view view-title="Ver Reglamento">
+	<ion-nav-title>
+    	<img class="logo_header" ng-src="{{'img/'+logo}}">
+    </ion-nav-title>
+	<div class="bar bar-subheader">
+	  <h2 class="title">Reglamento</h2>
+	</div>
+	<ion-content class="has-subheader has-header has-tabs">
+
+		<div class="card">
+			<div class="item item-divider">
+				Terminos y condiciones
+			</div>
+			<div class="item item-text-wrap" ng-bind-html="incentivo.Reglamento">
+			</div>
+		</div>
+
+	</ion-content>
+	<div class="tabs tabs-icon-top">
+	  <a class="tab-item" href="#/app/inicio">
+	    <i class="icon icon-custom icon-home"></i>
+	    Inicio
+	  </a>
+	  <a class="tab-item" ng-click="comunicacion()">
+	    <i class="icon icon-custom icon-comunicacion"></i>
+	    Comunicación
+	  </a>
+	  <a class="tab-item" ng-click="promociones()">
+	    <i class="icon icon-custom icon-promociones"></i>
+	    Promociones
+	  </a>
+	</div>
+</ion-view>

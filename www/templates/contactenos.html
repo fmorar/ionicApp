@@ -1,0 +1,36 @@
+<ion-view view-title="Contáctenos">
+  	<ion-nav-title>
+      	<img class="logo_header" ng-src="{{'img/'+logo}}">
+    </ion-nav-title>
+    <div class="bar bar-subheader">
+	  <h2 class="title">Contáctenos</h2>
+	</div>
+	<ion-content class="has-subheader has-header has-tabs contactoCsm">
+    	<div class="row">
+		  <div class="col text-center">
+		  	<img src="img/logo.png" class="full-image">
+	  		<p>Dirección:{{contacto.Direccion}}</p>
+	  		<p>Tel: (506){{contacto.Telefono1}}</p>
+	  		<p>Tel: (506){{contacto.Telefono2}}</p>
+	  		<p>Email: {{contacto.Email}}</p>
+		  </div>
+		</div>
+  		<div class="row">
+		  <div class="col text-center"><a onClick="window.open('http://www.grupounicomer.com/','_system','location=yes');return false;" href="#"><i class="icon ion-android-laptop"></i></a></div>
+		</div>
+  	</ion-content>
+  	<div class="tabs tabs-icon-top">
+	  <a class="tab-item" href="#/app/inicio">
+	    <i class="icon icon-custom icon-home"></i>
+	    Inicio
+	  </a>
+	  <a class="tab-item" ng-click="comunicacion()">
+	    <i class="icon icon-custom icon-comunicacion"></i>
+	    Comunicación
+	  </a>
+	  <a class="tab-item" ng-click="promociones()">
+	    <i class="icon icon-custom icon-promociones"></i>
+	    Promociones
+	  </a>
+	</div>
+</ion-view>

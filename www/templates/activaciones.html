@@ -1,0 +1,67 @@
+<ion-view view-title="Activaciones">
+  	<ion-nav-title>
+      <img class="logo_header" ng-src="{{'img/'+logo}}">
+    </ion-nav-title>
+    <div class="bar bar-subheader">
+	  <h2 class="title">Activaciones</h2>
+	</div>
+  	<ion-content class="has-subheader has-tabs">
+	    <div class="list">
+	    	<div class="padding">
+			  <label class="item item-input item-select">
+			    <div class="input-label">
+			      Mes
+			    </div>
+			    <input type="month" ng-model="filtroMes" ng-change="filtrarMes(filtroMes)" />
+			  </label>
+			</div>
+		</div>
+		<div class="list card">
+			<div class="item item-divider dividerCustom">
+			    Lista de Activaciones
+			 </div>
+			 <div class="list card">
+			    <div class="list">
+			      	<a class="item item-thumbnail-left" ng-click="verActivacion(activacion)" ng-model="listaActivaciones" ng-repeat="activacion in Activaciones | MonthYear : f1">
+			      		<img ng-src="{{activacion.Banner}}" class="full-image">
+			      		<h2>{{activacion.Titulo}}</h2>
+	      	    		<p><strong>Descripción: {{activacion.Descripcion}}</p>
+			      	</a>
+			    </div>
+			</div>
+	  	</div>
+  	</ion-content>
+  	<div class="tabs tabs-icon-top">
+	  <a class="tab-item" href="#/app/inicio">
+	    <i class="icon icon-custom icon-home"></i>
+	    Inicio
+	  </a>
+	  <a class="tab-item" ng-click="comunicacion()">
+	    <i class="icon icon-custom icon-comunicacion"></i>
+	    Comunicación
+	  </a>
+	  <a class="tab-item" ng-click="promociones()">
+	    <i class="icon icon-custom icon-promociones"></i>
+	    Promociones
+	  </a>
+	</div>
+</ion-view>
+<script id="detalleActivacion.html" type="text/ng-template">
+<ion-modal-view>
+    <ion-header-bar class="bar-stable">
+      <h1 class="title">Detalle</h1>
+      <button class="button button-clear button-primary" ng-click="modal.hide()">Cerrar</button>
+    </ion-header-bar>
+    <ion-content>
+      	<div class="list">
+	    <div class="item item-body">
+	    	<h2>{{ActivacionSeleccion.Titulo}}</h2>
+		    <p><strong>Fecha de inicio: </strong>{{ActivacionSeleccion.Fecha | date: 'dd-MM-yyyy'}}</p>
+		    <p><strong>Fecha de Finalización: </strong>{{ActivacionSeleccion.FechaFinal | date: 'dd-MM-yyyy'}}</p>
+		    <p class="text-justify">{{ActivacionSeleccion.Descripcion}}</p>
+		    <p><img ng-src="{{ActivacionSeleccion.Banner}}" zoom-src="{{ActivacionSeleccion.Banner}}" zoom-view class="full-image"></p>
+	  	</div>
+  	</div> 
+    </ion-content>
+  </ion-modal-view>
+</script> 

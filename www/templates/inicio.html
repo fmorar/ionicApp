@@ -1,0 +1,32 @@
+<ion-view>
+	<ion-nav-title>
+      <img class="logo_header" ng-src="{{'img/'+logo}}">
+      <p>V.01</p>
+    </ion-nav-title>
+	<ion-content class="has-header has-tabs">
+	  
+
+   <ion-slide-box ng-if="banners.length" does-continue="true" auto-play="true" slide-interval="7000" show-pager="true" on-slide-changed="slideHasChanged($index)">
+      <ion-slide ng-repeat="banner in banners" class="padding">
+          <a ng-click="enlace(banner.enlace, banner.EnlaceExterno)">
+          	<img ng-src="{{banner.Imagen}}" class="full-image" />
+          </a>
+      </ion-slide>
+    </ion-slide-box>
+
+	</ion-content>
+	<div class="tabs tabs-icon-top">
+	  <a class="tab-item" href="#/app/inicio">
+	    <i class="icon icon-custom icon-home"></i>
+	    Inicio
+	  </a>
+	  <a class="tab-item" ng-click="comunicacion()">
+	    <i class="icon icon-custom icon-comunicacion"></i>
+	    Comunicación
+	  </a>
+	  <a class="tab-item" ng-click="promociones()">
+	    <i class="icon icon-custom icon-promociones"></i>
+	    Promociones
+	  </a>
+	</div>
+</ion-view>

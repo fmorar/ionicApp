@@ -1,0 +1,34 @@
+<ion-view view-title="Plan de Vendedores">
+	<ion-nav-title>
+    	<img class="logo_header" ng-src="{{'img/'+logo}}">
+    </ion-nav-title>
+	<div class="bar bar-subheader">
+	  <h2 class="title">Plan de Vendedores</h2>
+	</div>
+	<ion-content class="has-subheader has-header has-tabs">
+		  	<div class="list">
+			   		<a class="item item-icon-left" ng-href="#/app/contenidoIncentivos/{{incentivo.idPromo}}" ng-model="listaPromociones" ng-repeat="incentivo in incentivos | filter:chkidCat()"> 
+			   		   <i class="icon ion-ios-cart-outline"></i>
+				      {{incentivo.NombreIncentivo}}
+				      <p>Fecha de Inicio{{incentivo.FechaInicio}}</p>
+				      <p>Fecha Final{{incentivo.FechaFinal}}</p>
+				      <p>Fecha redención{{incentivo.FechaRend}}</p>
+				    </a>
+		  	</div>
+	</ion-content>
+	<div class="tabs tabs-icon-top">
+	  <a class="tab-item" href="#/app/inicio">
+	    <i class="icon icon-custom icon-home"></i>
+	    Inicio
+	  </a>
+	  <a class="tab-item" ng-click="comunicacion()">
+	    <i class="icon icon-custom icon-comunicacion"></i>
+	    Comunicación
+	  </a>
+	  <a href=""></a>
+	  <a class="tab-item" ng-click="promociones()">
+	    <i class="icon icon-custom icon-promociones"></i>
+	    Promociones
+	  </a>
+	</div>
+</ion-view>

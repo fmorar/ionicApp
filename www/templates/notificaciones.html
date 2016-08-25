@@ -1,0 +1,35 @@
+<ion-view view-title="Promociones">
+	<ion-nav-title>
+    	<img class="logo_header" ng-src="{{'img/'+logo}}">
+    </ion-nav-title>
+    <div class="bar bar-subheader">
+	  <h2 class="title">Notificaciones</h2>
+	</div>
+	<ion-content class="has-subheader has-header has-tabs">
+		<div class="list">
+		  	<div class="list card">
+			   	<div class="list">
+			   		<a class="item item-thumbnail-left" ng-href="#/app/notificaciones_detalles/{{notificacion.idNotificacion}}" ng-model="listaNotificaciones" ng-repeat="notificacion in Notificaciones">
+				      <img ng-src="{{notificacion.Imagen}}" class="full-image">
+				      <h2>{{notificacion.Titulo}}</h2>
+				      <p>{{notificacion.FechaEnvio}}</p>
+				    </a>
+			  	</div> 
+		  	</div>
+		</div>
+	</ion-content>
+	<div class="tabs tabs-icon-top">
+	  <a class="tab-item" href="#/app/inicio">
+	    <i class="icon icon-custom icon-home"></i>
+	    Inicio
+	  </a>
+	  <a class="tab-item" ng-click="comunicacion()">
+	    <i class="icon icon-custom icon-comunicacion"></i>
+	    Comunicación
+	  </a>
+	  <a class="tab-item" ng-click="promociones()">
+	    <i class="icon icon-custom icon-promociones"></i>
+	    Promociones
+	  </a>
+	</div>
+</ion-view>

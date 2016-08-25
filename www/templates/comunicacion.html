@@ -1,0 +1,36 @@
+<ion-view view-title="Comunicación">
+	<ion-nav-title>
+    	<img class="logo_header" ng-src="{{'img/'+logo}}">
+    </ion-nav-title>
+	<div class="bar bar-subheader">
+	  <h2 class="title">Comunicación</h2>
+	</div>
+	<ion-content class="has-subheader has-header has-tabs">
+		<div class="list">
+		  	<div class="list card">
+			   	<div class="list">
+			   		<a class="item item-thumbnail-left" ng-href="#/app/comunicacion_detalles/{{comunicado.idComunicado}}" ng-model="listaComunicados" ng-repeat="comunicado in Comunicados">
+				      <img ng-src="{{comunicado.Imagen}}" class="full-image">
+				      <h2>{{comunicado.Titulo}}</h2>
+				      <p>{{comunicado.FechaPublicacion}}</p>
+				    </a>
+			  	</div> 
+		  	</div>
+		</div>
+	</ion-content>
+	<div class="tabs tabs-icon-top">
+	  <a class="tab-item" href="#/app/inicio">
+	    <i class="icon icon-custom icon-home"></i>
+	    Inicio
+	  </a>
+	  <a class="tab-item" ng-click="comunicacion()">
+	    <i class="icon icon-custom icon-comunicacion"></i>
+	    Comunicación
+	  </a>
+	  <a href=""></a>
+	  <a class="tab-item" ng-click="promociones()">
+	    <i class="icon icon-custom icon-promociones"></i>
+	    Promociones
+	  </a>
+	</div>
+</ion-view>

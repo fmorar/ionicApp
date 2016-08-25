@@ -1,0 +1,37 @@
+<ion-view view-title="detallePromociones">
+	<ion-nav-title>
+    	<img class="logo_header" ng-src="{{'img/'+logo}}">
+    </ion-nav-title>
+	<div class="bar bar-subheader">
+	  <h2 class="title">Detalle de la Promoción</h2>
+	</div>
+	<ion-content class="has-subheader has-header has-tabs">
+			<div class="list">
+	    <div class="item item-body">
+		    <p><img ng-src="{{Promociones.Banner}}" zoom-src="{{Promociones.Banner}}" zoom-view class="full-image"></p>
+	    	<h3><p>{{Promociones.Titulo}}</p></h3>
+		    <p><strong>Marca: </strong>{{Promociones.Marca}}</p>
+		    <p><strong>Descripción: </strong>{{Promociones.Descripcion}}</p>
+    		<p><strong>Precio sin descuento: </strong>{{Promociones.Precio | currency:'₡'}}</p>
+    		<p><strong>Precio con descuento: </strong>{{Promociones.Ahora | currency:'₡'}}</p>
+    		<p>{{Promociones.Regalia}}</p>
+    		<p><strong>Codigo del producto: </strong>{{Promociones.Codigo}}</p>
+    		<p><strong>Fecha de vencimiento: </strong>{{Promociones.FechaFinal}}</p>
+	  	</div>
+  	</div> 
+	</ion-content>
+	<div class="tabs tabs-icon-top">
+	  <a class="tab-item" href="#/app/inicio">
+	    <i class="icon icon-custom icon-home"></i>
+	    Inicio
+	  </a>
+	  <a class="tab-item" ng-click="comunicacion()">
+	    <i class="icon icon-custom icon-comunicacion"></i>
+	    Comunicación
+	  </a>
+	  <a class="tab-item" ng-click="promociones()">
+	    <i class="icon icon-custom icon-promociones"></i>
+	    Promociones
+	  </a>
+	</div>
+</ion-view>

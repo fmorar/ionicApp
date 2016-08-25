@@ -1,0 +1,48 @@
+<ion-view view-title="Enviar Facturas">
+	<ion-nav-title>
+    	<img class="logo_header" ng-src="{{'img/'+logo}}">
+    </ion-nav-title>
+	<div class="bar bar-subheader">
+	  <h2 class="title">Enviar Facturas</h2>
+	</div>
+	<ion-content padding="true" class="has-subheader has-header has-tabs">
+	<form name="activarFacturas">
+		<button class="button button-block button-dark" ng-click="takePhoto()">Tomar una Foto</button>
+		<img ng-src="{{fotoFactura}}" id="myImage" class="full-image" />	
+		<div class="list">
+		  <label class="item item-input">
+		    <input type="text" ng-model="formData.factura" placeholder="Codigo de la Factura">
+		  </label>
+		  <div ng-repeat="producto in productos track by $index">
+		   <label class="item item-input item-select">
+		    <div class="input-label">
+		      Código del producto
+		    </div>
+		    <select ng-model="formData.codigos[$index]" ng-options="item.Codigo for item in codigos ">
+		    </select>
+		  </label>
+		</div>
+			<div class="padding">
+				<button class="button button-block button-positive" ng-click="addProducto()">Agregar otro producto</button>
+			</div>
+			<div class="padding">
+				<button class="button button-block button-positive" ng-click="procesarActivacion(formData)">Enviar</button>
+			</div>
+		</div>
+	</form>
+	</ion-content>
+	<div class="tabs tabs-icon-top">
+	  <a class="tab-item" href="#/app/inicio">
+	    <i class="icon icon-custom icon-home"></i>
+	    Inicio
+	  </a>
+	  <a class="tab-item" ng-click="comunicacion()">
+	    <i class="icon icon-custom icon-comunicacion"></i>
+	    Comunicación
+	  </a>
+	  <a class="tab-item" ng-click="promociones()">
+	    <i class="icon icon-custom icon-promociones"></i>
+	    Promociones
+	  </a>
+	</div>
+</ion-view>

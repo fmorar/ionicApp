@@ -1,0 +1,45 @@
+<ion-view view-title="Plan de Vendedores">
+	<ion-nav-title>
+    	<img class="logo_header" ng-src="{{'img/'+logo}}">
+    </ion-nav-title>
+	<div class="bar bar-subheader">
+	  <h2 class="title">{{incentivo.NombreIncentivo}}</h2>
+	</div>
+	<ion-content class="has-subheader has-header has-tabs">
+
+		<div class="list">
+
+	   		<a class="item item-icon-left" ng-href="#/app/productosParticipantes/{{incentivo.idPromo}}" ng-model="productosParticipantes"> 
+	   		   <i class="icon ion-ios-box-outline"></i>
+	   		   <h2>Productos Participantes</h2>
+		    </a>
+
+		    <a class="item item-icon-left" ng-href="#/app/misPuntos/{{incentivo.idPromo}}" ng-model="misPuntosCtrl"> 
+	   		   <i class="icon ion-ios-person-outline"></i>
+	   		   <h2>Mis puntos</h2>
+		    </a>
+
+		    <a class="item item-icon-left" ng-href="#/app/verReglamento/{{incentivo.idPromo}}" ng-model="reglamento"> 
+	   		   <i class="icon ion-ios-gear-outline"></i>
+	   		   <h2>Mecánica de la promoción</h2>
+		    </a>
+
+		</div>
+
+	</ion-content>
+	<div class="tabs tabs-icon-top">
+	  <a class="tab-item" href="#/app/inicio">
+	    <i class="icon icon-custom icon-home"></i>
+	    Inicio
+	  </a>
+	  <a class="tab-item" ng-click="comunicacion()">
+	    <i class="icon icon-custom icon-comunicacion"></i>
+	    Comunicación
+	  </a>
+	  <a href=""></a>
+	  <a class="tab-item" ng-click="promociones()">
+	    <i class="icon icon-custom icon-promociones"></i>
+	    Promociones
+	  </a>
+	</div>
+</ion-view>

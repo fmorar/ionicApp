@@ -1,0 +1,36 @@
+<ion-view view-title="Premios">
+	<ion-nav-title>
+    	<img class="logo_header" ng-src="{{'img/'+logo}}">
+    </ion-nav-title>
+	<div class="bar bar-subheader">
+	  <h2 class="title">Premios</h2>
+	</div>
+	<ion-content class="has-subheader has-header has-tabs">
+		<div class="list">
+		  	<div class="list card">
+			   	<div class="list">
+			   		<a class="item" ng-model="listaPremios" ng-repeat="premio in Premios">
+				      <img ng-src="{{premio.Imagen}}" class="full-image">
+				      <h2>{{premio.Premio}}</h2>
+	      	    	<p><strong>Descripción: {{premio.Descripcion}}</p>
+    	   		    <p>puntos requeridos: {{premio.Puntos}}</p>
+				    </a>
+			  	</div> 
+		  	</div>
+		</div>
+	</ion-content>
+	<div class="tabs tabs-icon-top">
+	  <a class="tab-item" href="#/app/inicio">
+	    <i class="icon icon-custom icon-home"></i>
+	    Inicio
+	  </a>
+	  <a class="tab-item" ng-click="comunicacion()">
+	    <i class="icon icon-custom icon-comunicacion"></i>
+	    Comunicación
+	  </a>
+	  <a class="tab-item" ng-click="promociones()">
+	    <i class="icon icon-custom icon-promociones"></i>
+	    Promociones
+	  </a>
+	</div>
+</ion-view>

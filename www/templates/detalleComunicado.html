@@ -1,0 +1,35 @@
+<ion-view view-title="detalleComunicado">
+	<ion-nav-title>
+    	<img class="logo_header" ng-src="{{'img/'+logo}}">
+    </ion-nav-title>
+	<div class="bar bar-subheader">
+	  <h2 class="title">Detalle del comunicado</h2>
+	</div>
+	<ion-content class="has-subheader has-header has-tabs">
+	<div class="list">
+	    <div class="item item-body">
+		    <p><img ng-src="{{Comunicados.Imagen}}" zoom-src="{{Comunicados.Imagen}}" zoom-view class="full-image"></p>
+	    	<h3>{{Comunicados.Titulo}}</h3>
+		    <p>{{Comunicados.Detalle}}</p>
+		    <p><strong>Medio: </strong>{{Comunicados.Tipo}}</p>
+		    <p><strong>Fecha Publicación: </strong>{{Comunicados.FechaPublicacion}}</p>
+			<button ng-show="Comunicados.Archivo != null" class="button button-full button-positive" ng-click="descargar('{{Comunicados.Archivo}}')">Descargar Archivo</button>
+		    <p ng-show="Comunicados.Enlace != '' "><strong>Enlace: </strong><a ng-href="#" ng-click="openExternal(Comunicados.Enlace)">Ver archivo multimedia</a></p>
+	  	</div>
+  	</div> 
+	</ion-content>
+	<div class="tabs tabs-icon-top">
+	  <a class="tab-item" href="#/app/inicio">
+	    <i class="icon icon-custom icon-home"></i>
+	    Inicio
+	  </a>
+	  <a class="tab-item" ng-click="comunicacion()">
+	    <i class="icon icon-custom icon-comunicacion"></i>
+	    Comunicación
+	  </a>
+	  <a class="tab-item" ng-click="promociones()">
+	    <i class="icon icon-custom icon-promociones"></i>
+	    Promociones
+	  </a>
+	</div>
+</ion-view>
